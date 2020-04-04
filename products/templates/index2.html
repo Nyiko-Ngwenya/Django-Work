@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static 'images/' as baseURL %}
+
+{% block content %}
+    <h1>Products</h1>
+    <ul>
+        {% for product in products %}
+            <li> <h1>{{product.name }}</h1> <img src="{% get_static_prefix %}{{product.image_url}}" > </li>
+
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
+
